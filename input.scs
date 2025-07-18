@@ -1,0 +1,130 @@
+// Point Netlist Generated on: Jul 17 18:08:51 2025
+// Generated for: spectre
+// Design Netlist Generated on: Jul 17 18:08:50 2025
+// Design library name: Project2
+// Design cell name: tb_Project2
+// Design view name: schematic
+simulator lang=spectre
+include "ade_e.scs"
+global 0
+parameters temperature=27 Wn_w=0.57143u Wp_w=0.42857u Wn_a=1.3u Wn_b=3.1u \
+    Wn_c=6.1u Wp_a=0.95u Wp_b=2.85u Wp_c=4.05u vin=1 vin_A=0 vin_B=1
+include "/CMC/kits/GPDK45/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs" section=mc
+
+// Library name: Project2
+// Cell name: inv_1
+// View name: schematic
+subckt inv_1 VDD VIN VOUT VSS
+    NM0 (VOUT VIN VSS VSS) g45n1svt w=(48u) l=45n nf=5 as=4.416p ad=4.416p \
+        ps=58.52u pd=58.52u nrd=1.91667m nrs=1.91667m sa=140n sb=140n \
+        sd=160n sca=44.26698 scb=0.04996 scc=0.00564 m=(1)
+    PM0 (VOUT VIN VDD VDD) g45p1svt w=(72u) l=45n nf=8 as=6.84p ad=5.76p \
+        ps=91.52u pd=73.28u nrd=1.11111m nrs=1.31944m sa=140n sb=140n \
+        sd=160n sca=44.49550 scb=0.05008 scc=0.00566 m=(1)
+ends inv_1
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: nand_w
+// View name: schematic
+subckt nand_w A B VDD VSS VOUT
+    NM4 (net9 B VSS VSS) g45n1svt w=(570n) l=45n nf=1 as=79.8f ad=79.8f \
+        ps=1.42u pd=1.42u nrd=245.614m nrs=245.614m sa=140n sb=140n \
+        sd=160n sca=93.72638 scb=0.07847 scc=0.01111 m=(1)
+    NM2 (VOUT A net9 VSS) g45n1svt w=(570n) l=45n nf=1 as=79.8f ad=79.8f \
+        ps=1.42u pd=1.42u nrd=245.614m nrs=245.614m sa=140n sb=140n \
+        sd=160n sca=93.72638 scb=0.07847 scc=0.01111 m=(1)
+    PM2 (VOUT B VDD VDD) g45p1svt w=(430n) l=45n nf=1 as=60.2f ad=60.2f \
+        ps=1.14u pd=1.14u nrd=325.581m nrs=325.581m sa=140n sb=140n \
+        sd=160n sca=108.84354 scb=0.08693 scc=0.01299 m=(1)
+    PM1 (VOUT A VDD VDD) g45p1svt w=(430n) l=45n nf=1 as=60.2f ad=60.2f \
+        ps=1.14u pd=1.14u nrd=325.581m nrs=325.581m sa=140n sb=140n \
+        sd=160n sca=108.84354 scb=0.08693 scc=0.01299 m=(1)
+ends nand_w
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: nand_a
+// View name: schematic
+subckt nand_a A B VDD VSS VOUT
+    NM4 (net9 B VSS VSS) g45n1svt w=(1.3u) l=45n nf=1 as=182f ad=182f \
+        ps=2.88u pd=2.88u nrd=107.692m nrs=107.692m sa=140n sb=140n \
+        sd=160n sca=65.32613 scb=0.06164 scc=0.00784 m=(1)
+    NM2 (VOUT A net9 VSS) g45n1svt w=(1.3u) l=45n nf=1 as=182f ad=182f \
+        ps=2.88u pd=2.88u nrd=107.692m nrs=107.692m sa=140n sb=140n \
+        sd=160n sca=65.32613 scb=0.06164 scc=0.00784 m=(1)
+    PM2 (VOUT B VDD VDD) g45p1svt w=(950n) l=45n nf=1 as=133f ad=133f \
+        ps=2.18u pd=2.18u nrd=147.368m nrs=147.368m sa=140n sb=140n \
+        sd=160n sca=73.81963 scb=0.06661 scc=0.00878 m=(1)
+    PM1 (VOUT A VDD VDD) g45p1svt w=(950n) l=45n nf=1 as=133f ad=133f \
+        ps=2.18u pd=2.18u nrd=147.368m nrs=147.368m sa=140n sb=140n \
+        sd=160n sca=73.81963 scb=0.06661 scc=0.00878 m=(1)
+ends nand_a
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: inv_b
+// View name: schematic
+subckt inv_b VDD VIN VOUT VSS
+    NM0 (VOUT VIN VSS VSS) g45n1svt w=(3.1u) l=45n nf=1 as=434f ad=434f \
+        ps=6.48u pd=6.48u nrd=45.1613m nrs=45.1613m sa=140n sb=140n \
+        sd=160n sca=51.36485 scb=0.05380 scc=0.00636 m=(1)
+    PM0 (VOUT VIN VDD VDD) g45p1svt w=(2.85u) l=45n nf=1 as=399f ad=399f \
+        ps=5.98u pd=5.98u nrd=49.1228m nrs=49.1228m sa=140n sb=140n \
+        sd=160n sca=52.27108 scb=0.05429 scc=0.00646 m=(1)
+ends inv_b
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: inv_c
+// View name: schematic
+subckt inv_c VDD VIN VOUT VSS
+    NM0 (VOUT VIN VSS VSS) g45n1svt w=(12.2u) l=45n nf=2 as=1.708p ad=976f \
+        ps=24.96u pd=12.52u nrd=6.55738m nrs=11.4754m sa=140n sb=140n \
+        sd=160n sca=46.22758 scb=0.05101 scc=0.00584 m=(1)
+    PM0 (VOUT VIN VDD VDD) g45p1svt w=(8.1u) l=45n nf=2 as=1.134p ad=648f \
+        ps=16.76u pd=8.42u nrd=9.87654m nrs=17.284m sa=140n sb=140n \
+        sd=160n sca=48.92663 scb=0.05247 scc=0.00611 m=(1)
+ends inv_c
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: MUX
+// View name: schematic
+subckt MUX A B Sel Sel\* VDD VSS VOUT
+    I12 (B Sel\* VDD VSS net3) nand_w
+    I8 (A Sel VDD VSS net8) nand_w
+    I9 (net8 net3 VDD VSS net10) nand_a
+    I10 (VDD net10 net15 VSS) inv_b
+    I11 (VDD net15 VOUT VSS) inv_c
+ends MUX
+// End of subcircuit definition.
+
+// Library name: Project2
+// Cell name: tb_Project2
+// View name: schematic
+I0 (VDD Y net2 VSS) inv_1
+V3 (Sel_bar 0) vsource type=pulse val0=vin val1=0 period=2n rise=5p \
+        fall=5p width=1n
+V2 (Sel 0) vsource type=pulse val0=0 val1=vin period=2n rise=5p fall=5p \
+        width=1n
+I14 (A B Sel Sel_bar VDD VSS Y) MUX
+V6 (A 0) vsource dc=vin_A type=dc
+V5 (VSS 0) vsource dc=0 type=dc
+V4 (VDD 0) vsource dc=1 type=dc
+V7 (B 0) vsource dc=vin_B type=dc
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=9n errpreset=conservative write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save A B Sel Sel_bar Y 
+saveOptions options save=allpub
